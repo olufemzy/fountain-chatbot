@@ -1,3 +1,23 @@
 *{
    margin: 0px auto;
 }
+body{
+   background: linear-gradient(180deg, green, #006400, green);
+   background-image: url(assets/images/IMG_20210423_005142_133.jpg);
+   background-attachment: fixed;
+}
+.all-bg{
+   
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-content: space-between ;
+}
+.chat-box{
+  background: rgba(255, 255, 255, 0.2);
+  height: 500px;
+  width: 70%;
+  padding: 15px;
+  border-radius: 15px;
+  backdrop-filter: blur(20px);
+}
