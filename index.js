@@ -6,6 +6,11 @@ const sendMessage = document.getElementById("send_message")
 
 const sendMessageAction = () => { 
    const userMessage = question.value.trim() 
+
+   const createBotresponse = () =>{
+      
+   }
+
    if(userMessage != ""){
       alert("A message was sent")
       // creating user message
@@ -19,16 +24,19 @@ const sendMessageAction = () => {
       userP.textContent = `${userMessage}`
       question.value = ""
 
-      // creating bot message
-      let botDiv = document.createElement('div')
-      let botP = document.createElement('p')
-      messageBox.appendChild(botDiv)
-      botDiv.appendChild(botP)
-      botDiv.className = "bot-message-box"
+      setTimeout(() => {
+         // creating bot message
+         let botDiv = document.createElement('div')
+         let botP = document.createElement('p')
+         messageBox.appendChild(botDiv)
+         botDiv.appendChild(botP)
+         botDiv.className = "bot-message-box"
 
-      // Adding bot response to the UI
-      botP.textContent = "this is the bot Responding"
-
+         // Adding bot response to the UI
+         botP.textContent = "this is the bot Responding"
+      }, 2000);
+      
+      // Scroll to the bottom of the chat
       messageBox.scrollTop = messageBox.scrollHeight;
    }
    else{
