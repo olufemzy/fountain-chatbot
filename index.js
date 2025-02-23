@@ -23,8 +23,9 @@ const sendMessageAction = () => {
       // Adding user message to the UI
       userP.textContent = `${userMessage}`
       question.value = ""
+      question.focus()
 
-      setTimeout(() => {
+      // setTimeout(() => {   
          // creating bot message
          let botDiv = document.createElement('div')
          let botP = document.createElement('p')
@@ -34,7 +35,7 @@ const sendMessageAction = () => {
 
          // Adding bot response to the UI
          botP.textContent = "this is the bot Responding"
-      }, 2000);
+      // }, 1000);
       
       // Scroll to the bottom of the chat
       messageBox.scrollTop = messageBox.scrollHeight;
