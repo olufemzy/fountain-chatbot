@@ -4,22 +4,34 @@ const sendMessage = document.getElementById("send_message")
 
 // Actions when the send message button is pressed
 
-const sendMessageAction = () => {   
-   if(question.value != ""){
+const sendMessageAction = () => { 
+   const userMessage = question.value.trim() 
+   if(userMessage != ""){
       alert("A message was sent")
-      // creating 
-      let messageDiv = document.createElement('div')
-      let messageP = document.createElement('p')
-      messageBox.appendChild(messageDiv)
-      messageDiv.appendChild(messageP)
-      messageDiv.className = "user-message-box"
+      // creating user message
+      let userDiv = document.createElement('div')
+      let userP = document.createElement('p')
+      messageBox.appendChild(userDiv)
+      userDiv.appendChild(userP)
+      userDiv.className = "user-message-box"
       
       // Adding user message to the UI
-      messageP.textContent = `${question.value}`
+      userP.textContent = `${userMessage}`
       question.value = ""
+
+      // creating bot message
+      let botDiv = document.createElement('div')
+      let botP = document.createElement('p')
+      messageBox.appendChild(botDiv)
+      botDiv.appendChild(botP)
+      botDiv.className = "bot-message-box"
+
+      // Adding bot response to the UI
+      botP.textContent = "i am a boy"
    }
    else{
       alert("ask a question ❓")
+      question.focus()
    }
 }
 
