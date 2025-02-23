@@ -27,7 +27,9 @@ const sendMessageAction = () => {
       botDiv.className = "bot-message-box"
 
       // Adding bot response to the UI
-      botP.textContent = "i am a boy"
+      botP.textContent = "this is the bot Responding"
+
+      messageBox.scrollTop = messageBox.scrollHeight;
    }
    else{
       alert("ask a question ❓")
