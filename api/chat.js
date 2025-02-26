@@ -17,7 +17,7 @@ app.use(cors());
 console.log("🟢 Middleware set up complete");
 
 const openai = new OpenAI({
-    apiKey: process.env.SECRET_KEY,
+   apiKey: process.env.SECRET_KEY,
 });
 
 // Chat route with logs
